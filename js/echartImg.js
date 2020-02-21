@@ -1,0 +1,174 @@
+var myCol=echarts.init(document.getElementById('col'));
+var myPie=echarts.init(document.getElementById('pie'));
+var myFold=echarts.init(document.getElementById('fold'));
+
+myCol.setOption({
+    title:{
+        text:'柱状图数据展示',
+        textStyle:{
+            fontSize:20,
+            color:'#262b2e'
+        },
+        left:'40%'
+    },
+    tooltip:{},
+    legend:{},
+    xAxis:{
+        data:[],
+        axisLine:{
+            show:false
+        },
+        axisTick:{
+            show:false
+        },
+        splitLine:{
+            lineStyle:{
+                type:'dotted'
+            }
+        },
+    },
+    yAxis:{
+        name:'商品数',
+        axisLine:{
+            show:false
+        },
+        axisTick:{
+            show:false
+        },
+        splitLine:{
+            lineStyle:{
+                type:'dotted'
+            }
+        },
+    },
+    series:[{
+        name:'',
+        type:'bar',
+        barWidth:15,
+        itemStyle:{
+          normal:{
+              color:"#4486ef"
+          }
+        },
+        data:[]
+    }]
+});
+myPie.setOption({
+    title:{
+      text:'饼状图数据展示',
+        textStyle:{
+            fontSize:20,
+            color:'#262b2e',
+        },
+        left:'40%'
+
+    },
+    series:[{
+        name:'',
+        type:'pie',
+        radius:'55%',
+        data:[]
+    }]
+});
+myFold.setOption({
+    title:{
+        text:'曲线图数据展示',
+        textStyle:{
+            fontSize:20,
+            color:'#262b2e'
+        },
+        left:'40%'
+    },
+    tooltip:{},
+    legend:{},
+    xAxis:{
+        axisLine:{
+          show:false
+        },
+        axisTick:{
+            show:false
+        },
+        splitLine:{
+          lineStyle:{
+              type:'dotted'
+          }
+        },
+        data:[]
+    },
+    yAxis:{
+        axisLabel:{
+            formatter:'{value}人'
+        },
+        axisTick:{
+            show:false
+        },
+        axisLine:{
+            show:false
+        },
+        splitLine:{
+            lineStyle:{
+                type:'dotted'
+            }
+        },
+    },
+    series:[{
+        name:'',
+        type:'line',
+        symbolSize:4,
+        smooth:true,
+        lineStyle:{
+          normal:{
+              color:'#5691f0'
+          }
+        },
+        itemStyle: {
+            normal: {
+                color: "#4486ef"
+            }
+        },
+        areaStyle:{
+            normal:{
+                color:'#f3f7fe'
+            }
+        },
+        data:[]
+    }]
+})
+
+$.get('https://edu.telking.com/api/?type=week',function(res){
+    var data=[];
+    for(var i=0;i<res.data.series.length-1;i++)
+    {
+        data.push({
+            name:res.data.xAxis[i],
+            value:res.data.series[i]
+        })
+    }
+    myPie.setOption({
+        series:{
+            name:'',
+            data:data
+        }
+    })
+    myCol.setOption({
+        xAxis:{
+            data:res.data.xAxis
+        },
+        series:{
+            name:'',
+            data:res.data.series
+        }
+    })
+});
+
+$.get('https://edu.telking.com/api/?type=month',function(res){
+    myFold.setOption({
+        xAxis:{
+            data:res.data.xAxis
+        },
+        series:{
+            name:'',
+            data:res.data.series
+        }
+    })
+});

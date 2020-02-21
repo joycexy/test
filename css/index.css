@@ -1,0 +1,343 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #f5f8f9;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?2hpvye');
+    src: url('fonts/icomoon.eot?2hpvye#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?2hpvye') format('truetype'),
+    url('fonts/icomoon.woff?2hpvye') format('woff'),
+    url('fonts/icomoon.svg?2hpvye#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*头部样式开始*/
+.header{
+    background-color: #ffffff;
+
+}
+
+.header .nav{
+    margin:0 auto;
+    width: 1140px;
+    height:100px;
+}
+
+.nav .nav-left {
+    float: left;
+}
+
+.nav .logo {
+    margin-top: 30px;
+    width: 105px;
+    height:30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #f92525;
+}
+
+
+.nav  p {
+    font-family: MyriadPro-Regular;
+    font-size: 12px;
+    color: #fff;
+}
+
+
+.header .nav .nav-right {
+    float: right;
+}
+.header .nav .icon-bell:before {
+    content: "\e951";
+    width: 17px;
+    height: 18px;
+    opacity: 0.7;
+    margin-right: 35px;
+}
+.header .nav .icon-cog:before {
+    content: "\e994";
+    width: 17px;
+    height: 18px;
+    opacity: 0.7;
+    margin-right:20px
+}
+
+.header .nav .login {
+    margin-top: 30px;
+    display: inline-block;
+    width: 110px;
+    height:40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #f92525;
+    border-radius: 2px;
+}
+/*头部样式结束*/
+
+/*主体样式开始*/
+
+/*菜单栏开始*/
+.content {
+    margin:70px auto 0px;
+    width: 1140px;
+}
+
+.content .nav {
+    position: relative;
+    height:47px;
+}
+.content .nav .title {
+   position: absolute;
+    left:0;
+}
+.content .nav .menu-list {
+    position: absolute;
+    right:0px;
+    list-style: none;
+}
+
+.content .nav li {
+    float: left;
+}
+
+.content .nav a {
+    text-decoration-line: none;
+    color: #262b2e;
+    font-size: 13px;
+    display: inline-block;
+    height:47px;
+    line-height: 70px;
+    margin-left: 33px;
+}
+
+.content .nav a:hover {
+    border-bottom: 2px solid #262b2e;
+    opacity: 0.2;
+}
+/*菜单栏结束*/
+
+/**/
+.content .main {
+    margin-top: 50px;
+}
+
+.content .main-a #advertise {
+    width:560px;
+    height:288px;
+    float: left;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.content .main-a #advertise ul {
+    width: 1000%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.content .main-a #advertise li {
+    float:left;
+    padding: 8px;
+}
+
+.content .main-a #btn{
+    z-index: 999;
+    width: 560px;
+    position: absolute;
+    top:128px;
+    left:0px;
+    text-align: center;
+    color: #fff;
+}
+
+.content .main-a ol {
+    position: absolute;
+    left:237px;
+    bottom:12px;
+}
+
+.content .main ol li {
+    width:10px;
+    height:10px;
+    display: inline-block;
+    background-color: #ffffff;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.content .main ol .current{
+    height:14px;
+}
+
+.content .main #btn span {
+    width:28px;
+    height:32px;
+    line-height: 32px;
+    background: #000;
+    opacity: 0.7;
+}
+.content .main #btn #left{
+    float: left;
+}
+
+.content .main #btn #right{
+    float: right;
+}
+
+.content .main .log {
+    float: right;
+    width:560px;
+}
+.content .main-a .title {
+    height:100px;
+    background-color: #fff;
+    border-bottom: 2px solid #f5f8f9;
+}
+
+.content .main-a .title p {
+    float: left;
+    font-size: 18px;
+    line-height: 100px;
+    color: #262b2e;
+    margin-left: 45px;
+}
+
+.content .main-a .title a {
+    display: block;
+    float: right;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+    line-height: 32px;
+    color:#262b2e;
+    opacity: 0.7;
+    width: 95px;
+    height: 34px;
+    border-radius: 2px;
+    border: solid 2px #262b2e;
+    margin:40px 50px 0 0;
+}
+
+.content .main-a .log-list {
+        background-color: #ffffff;
+
+}
+.content .log-list ul{
+    width:560px;
+    height:62px;
+    text-align: center;
+}
+.content .log-list li {
+    float: left;
+    height: 62px;
+    line-height: 62px;
+}
+.content .log-list .time{
+    width:130px;
+}
+.content .log-list .username{
+    width:300px;
+}
+.content .log-list .status{
+    width:130px;
+}
+.content .log-list ul+ul a{
+    cursor: pointer;
+    display: block;
+    width:65px;
+    height:30px;
+    font-size: 13px;
+    line-height: 30px;
+    color: #fff;
+    margin:12px 0 0 30px;
+    background-color: #5dd054;
+}
+/*清除浮动*/
+.content .main-a {
+    overflow: hidden;
+}
+
+.main .main-b  #fold{
+    width:1140px;
+    height:340px;
+    margin:20px 0 20px 0;
+    padding-top:50px;
+    background-color: #ffffff;
+}
+
+.main .main-c #pie {
+    width:560px;
+    height:377px;
+    float: left;
+    padding-top:45px;
+    background-color:#fff;
+}
+/*柱状样式图开始*/
+.main .main-c #col {
+    width:560px;
+    height:377px;
+    float: right;
+    padding-top:45px;
+    background-color: #fff;
+}
+
+/*柱状图样式结束*/
+
+.main {
+    overflow: hidden;
+    margin-bottom: 54px;
+}
+/*主体样式结束*/
+/*尾部样式开始*/
+.footer{
+    height:252px;
+    background-color: #000;
+    color: #fff;
+    border-top: 1px solid #000;
+}
+.footer .nav {
+    margin:48px auto 0;
+    width: 1140px;
+}
+
+.footer .nav-link {
+    float: left;
+    margin:30px 0px 0px 10px;
+    font-size: 13px;
+}
+
+.footer .nav-link ul {
+    margin-left: 80px;
+    float: left;
+}
+
+.footer .nav-link li {
+    margin-bottom: 15px;
+}
+
+/*尾部样式结束*/
